@@ -1,0 +1,8 @@
+<!--components/video-item-v2/index.wxml是视频播放页下方推荐视频的item-->
+<view class="relate-item">
+  <image src="{{item.coverUrl}}" mode="widthFix"></image>
+  <view class="create-info">
+    <view class="title">{{item.title}}</view>
+    <view class="userName">{{item.creator[0].userName}}</view>
+  </view>
+</view>

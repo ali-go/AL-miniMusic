@@ -1,0 +1,45 @@
+<!--pages/home-music/index.wxml-->
+<!-- 查询框 -->
+<van-search class="search" background="#f5f5f5" placeholder="搜索您喜欢的歌曲" shape="round" disabled bind:click-input="handleSearchClick"></van-search>
+<!-- 轮播图 -->
+<swiper class="swiper" indicator-dots autoplay circular style="height:{{swiperHeight}}px;">
+  <block wx:for="{{banners}}" wx:key="bannerId">
+    <swiper-item class="swiper-item">
+      <image bindload="imageLoad" class="swiper-image" src="{{item.pic}}" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 推荐歌曲 -->
+<view class="recommond-song" wx:if="{{recommondSong.length > 0}}">
+  <area-header title="歌曲推荐" rightText="更多" showRight="{{true}}" bindtap="handleMoreClick"></area-header>
+  <view class="song-list">
+    <block wx:for="{{recommondSong}}" wx:key="id">
+      <song-item-v1 item="{{item}}" bindtap="handleSongItemClick" data-index="{{index}}"></song-item-v1>
+    </block>
+  </view>
+</view>
+<!-- 热门歌单 -->
+<song-menu-area title="热门歌单" hotSongMenu="{{hotSongMenu}}" bindhandleMore="handleMoreMenuClick" data-type="流行"></song-menu-area>
+<!-- 推荐歌单 -->
+<song-menu-area title="推荐歌单" hotSongMenu="{{recommondSongMenu}}" bindhandleMore="handleMoreMenuClick" data-type="华语"></song-menu-area>
+<!-- 巅峰榜 -->
+<view class="ranking">
+  <area-header title="巅峰榜" showRight="{{false}}"></area-header>
+  <view class="ranking-list">
+    <block wx:for="{{ranking}}" wx:key="name">
+      <ranking-area-item item="{{item}}" data-idx="{{index}}" bindtap="handleRankingItemClick"></ranking-area-item>
+    </block>
+  </view>
+</view>
+<!-- 播放工具栏 -->
+<view class="play-bar-placeholder" wx:if="{{currentSong.id}}"></view>
+<view class="play-bar" wx:if="{{currentSong.id}}" bindtap="handlePlayBarClick">
+  <view class="left">
+    <image class="album album-anim" mode="aspectFill" src="{{currentSong.al.picUrl}}" style="animation-play-state: {{playAnimateState}};"></image>
+    <view class="name">{{currentSong.name}}</view>
+  </view>
+  <view class="right">
+    <image class="icon play" catchtap="handlePlayBtnClick" src="../../assets/images/music/{{isPlaying ? 'pause' : 'play'}}_icon.png"></image>
+    <image class="icon playList" src="../../assets/images/music/playlist_icon.png"></image>
+  </view>
+</view>

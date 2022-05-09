@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/home-music/index",
+    "pages/home-video/index",
+    "pages/home-profile/index"
+  ],
+  "subPackages": [
+    {
+      "root": "packageDetail",
+      "name": "pDeatil",
+      "pages": [
+        "pages/detail-menu/index",
+        "pages/detail-search/index",
+        "pages/detail-song/index",
+        "pages/detail-video/index"
+      ]
+    },
+    {
+      "root": "packagePlayer",
+      "name": "pPlayer",
+      "pages": [
+        "pages/music-player/index"
+      ]
+    }
+  ],
+  "preloadRule":{
+    "pages/home-music/index":{
+      "network": "all",
+      "packages": ["packageDetail","packagePlayer"]
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f5f5f5",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black",
+    "pageOrientation": "auto"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home-music/index",
+        "text": "音乐",
+        "iconPath": "assets/images/tabbar/music_normal.png",
+        "selectedIconPath": "assets/images/tabbar/profile_active.png"
+      },
+      {
+        "pagePath": "pages/home-video/index",
+        "text": "视频",
+        "iconPath": "assets/images/tabbar/video_normal.png",
+        "selectedIconPath": "assets/images/tabbar/video_active.png"
+      },
+      {
+        "pagePath": "pages/home-profile/index",
+        "text": "我的",
+        "iconPath": "assets/images/tabbar/profile_normal.png",
+        "selectedIconPath": "assets/images/tabbar/profile_active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "resizable": true,
+  "frameset": true,
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}

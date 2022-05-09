@@ -1,0 +1,9 @@
+<!--pages/detail-menu/index.wxml-->
+<!-- 更多歌单详情页 -->
+<view class="detail-menu">
+  <block wx:for="{{menuList}}" wx:key="id">
+    <view class="menu-item">
+      <song-menu-item item="{{item}}" class="menu-item-list" bindtap="handleMenuItemClick" data-item="{{item}}"></song-menu-item>
+    </view>
+  </block>
+</view>

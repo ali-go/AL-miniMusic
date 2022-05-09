@@ -1,0 +1,13 @@
+<!--components/area-header/index.wxml-->
+<view class="header">
+  <view class="title">{{title}}</view>
+  <view class="right" wx:if="{{showRight}}">
+    <!-- 小程序暂不支持默认插槽的默认显示，因此分设计 -->
+    <view class="slot">
+      <slot></slot>
+    </view>
+    <view class="default" bindtap="handleMoreClick"><text>{{rightText}}</text>
+      <image class="image" src="/assets/images/icons/arrow-right.png"></image>
+    </view>
+  </view>
+</view>

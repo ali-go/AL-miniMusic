@@ -1,0 +1,28 @@
+/* components/area-header/index.wxss */
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  line-height: 80rpx;
+  /* background-color: pink; */
+}
+.title{
+  font-weight: 700;
+
+}
+.right{
+  font-size: 24rpx;
+  color: #666;
+}
+/* 使用empty选择器去设置当没有传递插槽数据时默认的元素隐藏 */
+.right .slot:empty + .default{
+  display: flex;
+}
+.right .default{
+  display: none;
+  align-items: center;
+}
+.right .image{
+  width: 40rpx;
+  height: 40rpx;
+}

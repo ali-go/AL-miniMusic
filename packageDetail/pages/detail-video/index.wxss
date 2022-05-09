@@ -1,0 +1,50 @@
+/* pages/detail-video/index.wxss */
+page {
+  position: relative;
+  padding-top: 225px;
+}
+
+/* mv地址视频 */
+.video {
+  width: 100%;
+  /* 默认高度是225px */
+  position: fixed;
+  top: 0;
+}
+
+/* mv详情信息 */
+.detail{
+  padding: 16rpx;
+}
+.name{
+  font-size: 32rpx;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-line-clamp: 2;
+  -moz-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
+
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.artist-name{
+  font-size: 24rpx;
+  color: #666;
+}
+.count-time{
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 关联视频 */
+.relate{
+  padding: 16rpx;
+}
+.relate .title{
+  font-size: 32rpx;
+}

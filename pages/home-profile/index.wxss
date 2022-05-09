@@ -1,0 +1,22 @@
+/* pages/home-profile/index.wxss */
+.text ,.user{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 35%;
+  bottom: 50;
+  transform: translate(0,-50%);
+  text-align: center;
+}
+.text .btn{
+  color: #666;
+}
+.user .image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.user .name{
+  margin-top: 10px;
+  color: #666;
+}

@@ -1,0 +1,34 @@
+/* components/video-item-v2/index.wxss */
+.relate-item{
+  display: flex;
+  margin: 16rpx 0;
+  margin-bottom: 0;
+}
+
+.relate-item image{
+  flex: 1;
+  margin-right: 16rpx;
+}
+.create-info{
+  flex: 2;
+}
+
+.create-info .title{
+  font-size: 28rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-line-clamp: 2;
+  -moz-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.create-info .userName{
+  font-size: 24rpx;
+  color: #666;
+}

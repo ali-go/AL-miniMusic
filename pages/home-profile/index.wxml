@@ -1,0 +1,10 @@
+<!--pages/home-profile/index.wxml-->
+<view class="home-profile">
+  <view class="text" wx:if="{{!hasUserInfo}}">
+    <button class="btn" bindtap="getUserProfile"> 获取头像昵称 </button>
+  </view>
+  <view class="user" wx:else>
+    <image src="{{userInfo.avatarUrl}}" class="image"></image>
+    <view class="name">欢迎你，{{userInfo.nickName}}</view>
+  </view>
+</view>
